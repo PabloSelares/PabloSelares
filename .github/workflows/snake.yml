@@ -1,36 +1,30 @@
-name: Generate Snake Animation 🐍
+name: Snake Generator
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Executa diariamente à meia-noite UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
   push:
     branches: [ main ]
-  workflow_dispatch:
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Importante para o commit funcionar
-
+      - uses: actions/checkout@v4
+        
       - name: Generate Snake
-        uses: Platane/snk@master # Versão mais atualizada
+        uses: Platane/snk@master
         with:
           github_user_name: PabloSelares
           outputs: |
-            ./github-contribution-grid-snake.svg
-            ./github-contribution-grid-snake-dark.svg?palette=github-dark
+            assets/github-contribution-grid-snake.svg
+            assets/github-contribution-grid-snake-dark.svg
 
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "Update snake animation"
-          add: |
-            ./github-contribution-grid-snake.svg
-            ./github-contribution-grid-snake-dark.svg
-          push: true # Adiciona push automático
+      - name: Push to Repository
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git commit -m "Update snake animation"
+          git push
