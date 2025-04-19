@@ -23,10 +23,11 @@ jobs:
 
       - name: Verificar se a animação foi gerada
         run: ls -alh ./github-contribution-grid-snake.svg  
+
       - name: Faz commit da animação
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: github-actions@github.com
           message: "update contribution snake"
-          add: "./github-contribution-grid-snake.svg"  
+          add: "./github-contribution-grid-snake.svg" 
