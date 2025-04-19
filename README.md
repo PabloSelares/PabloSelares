@@ -3,7 +3,6 @@
 - 🔭 Hoje eu estou estudando na Unifacisa
 - 🌱 Aprendendo React Native
 
-<h1 align="center">Oiii! Eu sou o Pablo Selares 👋</h1>
 
 ---
 
