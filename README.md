@@ -39,4 +39,5 @@
 
 ### 🐍 Meus commits em forma de cobrinha:
 
-![Snake animation](https://github.com/PabloSelares/PabloSelares/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](./github-contribution-grid-snake.svg)  # ou ./output/github-contribution-grid-snake.svg se estiver em output/
+
