@@ -1,6 +1,4 @@
-## Olá! Eu sou o Pablo Selares  👋
-
-
+## Olá! Eu sou o Pablo Selares 👋
 
 - 🔭 Hoje eu estou estudando na Unifacisa
 - 🌱 Aprendendo React Native
@@ -42,4 +40,3 @@
 ### 🐍 Meus commits em forma de cobrinha:
 
 ![Snake animation](https://github.com/PabloSelares/PabloSelares/blob/output/github-contribution-grid-snake.svg)
-
